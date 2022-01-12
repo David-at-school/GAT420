@@ -36,6 +36,20 @@ public class Steering : MonoBehaviour
         return force;
     }
 
+    public Vector3 Cohesion(AutonomousAgent agent, GameObject[] neighbors)
+    {
+        Vector3 centerOfTargets = Vector3.zero;
+        foreach (GameObject target in neighbors)
+        {
+            centerOfTargets += target.transform.position;
+        }
+        centerOfTargets /= neighbors.Length;
+
+        Vector3 force = CalculateSteering(agent, centerOfTargets - agent.transform.position);
+
+        return force;
+    }
+
     Vector3 CalculateSteering(AutonomousAgent agent, Vector3 vector)
     {
         Vector3 direction = vector.normalized;

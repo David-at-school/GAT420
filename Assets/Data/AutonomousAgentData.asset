@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3518ce791de3c48826b61644213f5b, type: 3}
   m_Name: AutonomousAgentData
   m_EditorClassIdentifier: 
-  maxSpeed: 12
-  maxForce: 8
   seekWeight: 0
   fleeWeight: 5
-  cohesionWeight: 5
+  cohesionWeight: 1
   separationWeight: 1
   alignmentWeight: 1
+  obstacleWeight: 20
   separationRadius: 1
